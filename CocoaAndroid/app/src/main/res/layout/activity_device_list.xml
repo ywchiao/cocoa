@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bluetooth_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:title="@string/title_bluetooth"/>
+
+    <TextView android:id="@+id/title_paired_devices"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:padding="16dp"
+              android:text="@string/title_paired_devices"
+              android:textSize="14sp"
+              android:textColor="@color/md_grey_700"
+              android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/paired_devices"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:stackFromBottom="false"
+        android:layout_weight="0.26"/>
+
+
+    <TextView android:id="@+id/title_new_devices"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/title_new_devices"
+            android:textSize="14sp"
+            android:textColor="@color/md_grey_700" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmallInverse"
+        android:indeterminate="true"
+        android:indeterminateOnly="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/device_search_progress_bar"/>
+
+    <ListView
+        android:id="@+id/new_devices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+
+    <Button android:id="@+id/button_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="2"
+            android:text="@string/button_scan" />
+</LinearLayout>

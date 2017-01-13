@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CocoaAndroid</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_bluetooth">Bluetooth</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_new_devices">New Devices</string>
+    <string name="button_scan">Discover</string>
+</resources>

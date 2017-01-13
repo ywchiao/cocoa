@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/toolbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/fabs_layout"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_play_arrow_white_24dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/dock_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_cached_white_24px" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/clear_edit_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_clear_white_24px" />
+
+        </LinearLayout>
+
+        <!-- Code blocks selection bar
+            NOTE: android:layout_height="100dp" is needed,
+            so that this bar will appear at bottom
+        -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dock"
+            android:layout_below="@id/fabs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/md_grey_300"
+            app:layoutManager="LinearLayoutManager" />
+    </RelativeLayout>
+</layout>
